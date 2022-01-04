@@ -100,16 +100,16 @@ Pic pic[MAX];
 void SHOW_MENU()
 {
 	cout<<"============================================================="<<endl;
-    cout<<"         1.添加物品      2.查询物品      3.显示物品库          "<<endl;
-    cout<<"         4.编辑物品      5.删除物品      6.统计信息            "<<endl;
+	cout<<"         1.添加物品      2.查询物品      3.显示物品库          "<<endl;
+	cout<<"         4.编辑物品      5.删除物品      6.统计信息            "<<endl;
     cout<<"         7.物品存盘      8.读取物品      9.安全退出            "<<endl;
 	cout<<"============================================================="<<endl<<endl;
 }
 void Item_Add()
 {
 	cout<<"==================================================="<<endl;
-    cout<<"                       添加物品                   "<<endl;
-    cout<<"      1.添加图书    2.添加视频光盘    3.添加图画    "<<endl;
+	cout<<"                       添加物品                   "<<endl;
+	cout<<"      1.添加图书    2.添加视频光盘    3.添加图画    "<<endl;
 	cout<<"==================================================="<<endl<<endl;
 	int n;
     fflush(stdin);
@@ -777,11 +777,11 @@ int main()
             case 3:Item_Show();break;
             case 4:Item_Edit();break;
             case 5:Item_Delete();break;
-            case 6:Item_Sum();break;
-	    case 7:Item_Save();break;
-	    case 8:Item_Read();break;
-	    case 9:Item_Save();return 0;
-	    default:cout<<"错误数据!终止此次操作!"<<endl;break;
+			case 6:Item_Sum();break;
+			case 7:Item_Save();break;
+			case 8:Item_Read();break;
+			case 9:Item_Save();return 0;
+			default:cout<<"错误数据!终止此次操作!"<<endl;break;
         }
     }
 }
