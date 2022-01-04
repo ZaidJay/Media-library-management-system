@@ -10,18 +10,18 @@ class Lib
 public:
 	void Item_Add()
 	{
-		cout<<"±àºÅ:";
+		cout<<"ç¼–å·:";
 		cin>>Number;
-		cout<<"±êÌâ:";
+		cout<<"æ ‡é¢˜:";
 		cin>>Title;
-		cout<<"×÷Õß:";
+		cout<<"ä½œè€…:";
 		cin>>Artist;
-		cout<<"ÆÀ¼¶:";
+		cout<<"è¯„çº§:";
 		cin>>Level;
 	}
 	void Item_Display()
 	{
-		cout<<"±àºÅ:"<<Number<<"    ±êÌâ:"<<Title<<"    ×÷Õß:"<<Artist<<"    ÆÀ¼¶:"<<Level;
+		cout<<"ç¼–å·:"<<Number<<"    æ ‡é¢˜:"<<Title<<"    ä½œè€…:"<<Artist<<"    è¯„çº§:"<<Level;
 	}
 	long Number;
 	string Title;
@@ -34,17 +34,17 @@ public:
 	void Book_Add()
 	{
 		Lib::Item_Add();
-		cout<<"³ö°æÉç:";
+		cout<<"å‡ºç‰ˆç¤¾:";
 		cin>>Publish;
 		cout<<"ISBN:";
 		cin>>ISBN;
-		cout<<"Ò³Êý:";
+		cout<<"é¡µæ•°:";
 		cin>>Page_Num; 
 	}
 	void Book_Display()
 	{
 		Lib::Item_Display();
-		cout<<"    ³ö°æÉç:"<<Publish<<"    ISBN:"<<ISBN<<"    Ò³Êý:"<<Page_Num<<endl; 
+		cout<<"    å‡ºç‰ˆç¤¾:"<<Publish<<"    ISBN:"<<ISBN<<"    é¡µæ•°:"<<Page_Num<<endl; 
 	}
 	string Publish;
 	string ISBN;
@@ -56,17 +56,17 @@ public:
 	void Disk_Add()
 	{
 		Lib::Item_Add();
-		cout<<"³öÆ·ÕßÐÕÃû:";
+		cout<<"å‡ºå“è€…å§“å:";
 		cin>>Producer;
-		cout<<"³öÆ·Äê·Ý:";
+		cout<<"å‡ºå“å¹´ä»½:";
 		cin>>Date;
-		cout<<"ÊÓÆµÊ±³¤:";
+		cout<<"è§†é¢‘æ—¶é•¿:";
 		cin>>Time;
 	}
 	void Disk_Display()
 	{
 		Lib::Item_Display();
-		cout<<"    ³öÆ·ÕßÐÕÃû:"<<Producer<<"    ³öÆ·Äê·Ý:"<<Date<<"    ÊÓÆµÊ±³¤:"<<Time<<endl;
+		cout<<"    å‡ºå“è€…å§“å:"<<Producer<<"    å‡ºå“å¹´ä»½:"<<Date<<"    è§†é¢‘æ—¶é•¿:"<<Time<<endl;
 	}
 	string Producer;
 	string Date;
@@ -78,17 +78,17 @@ public:
 	void Pic_Add()
 	{
 		Lib::Item_Add();
-		cout<<"³öÆ·¹ú¼®:";
+		cout<<"å‡ºå“å›½ç±:";
 		cin>>Country; 
-		cout<<"×÷Æ·µÄ³¤:";
+		cout<<"ä½œå“çš„é•¿:";
 		cin>>Length;
-		cout<<"×÷Æ·µÄ¿í:";
+		cout<<"ä½œå“çš„å®½:";
 		cin>>Width; 
 	}
 	void Pic_Display()
 	{
 		Lib::Item_Display();
-		cout<<"    ³öÆ·¹ú¼®:"<<Country<<"    ×÷Æ·µÄ³¤:"<<Length<<"cm"<<"    ×÷Æ·µÄ¿í:"<<Width<<"cm"<<endl;
+		cout<<"    å‡ºå“å›½ç±:"<<Country<<"    ä½œå“çš„é•¿:"<<Length<<"cm"<<"    ä½œå“çš„å®½:"<<Width<<"cm"<<endl;
 	}
 	string Country;
 	int Length;
@@ -100,16 +100,16 @@ Pic pic[MAX];
 void SHOW_MENU()
 {
 	cout<<"============================================================="<<endl;
-    cout<<"         1.Ìí¼ÓÎïÆ·      2.²éÑ¯ÎïÆ·      3.ÏÔÊ¾ÎïÆ·¿â          "<<endl;
-    cout<<"         4.±à¼­ÎïÆ·      5.É¾³ýÎïÆ·      6.Í³¼ÆÐÅÏ¢            "<<endl;
-    cout<<"         7.ÎïÆ·´æÅÌ      8.¶ÁÈ¡ÎïÆ·      9.°²È«ÍË³ö            "<<endl;
+    cout<<"         1.æ·»åŠ ç‰©å“      2.æŸ¥è¯¢ç‰©å“      3.æ˜¾ç¤ºç‰©å“åº“          "<<endl;
+    cout<<"         4.ç¼–è¾‘ç‰©å“      5.åˆ é™¤ç‰©å“      6.ç»Ÿè®¡ä¿¡æ¯            "<<endl;
+    cout<<"         7.ç‰©å“å­˜ç›˜      8.è¯»å–ç‰©å“      9.å®‰å…¨é€€å‡º            "<<endl;
 	cout<<"============================================================="<<endl<<endl;
 }
 void Item_Add()
 {
 	cout<<"==================================================="<<endl;
-    cout<<"                       Ìí¼ÓÎïÆ·                   "<<endl;
-    cout<<"      1.Ìí¼ÓÍ¼Êé    2.Ìí¼ÓÊÓÆµ¹âÅÌ    3.Ìí¼ÓÍ¼»­    "<<endl;
+    cout<<"                       æ·»åŠ ç‰©å“                   "<<endl;
+    cout<<"      1.æ·»åŠ å›¾ä¹¦    2.æ·»åŠ è§†é¢‘å…‰ç›˜    3.æ·»åŠ å›¾ç”»    "<<endl;
 	cout<<"==================================================="<<endl<<endl;
 	int n;
     fflush(stdin);
@@ -119,10 +119,10 @@ void Item_Add()
 		case 1:book[Book_Count++].Book_Add();break;
 		case 2:disk[Disk_Count++].Disk_Add();break;
 		case 3:pic[Pic_Count++].Pic_Add();break;
-		default:cout<<"´íÎóÊý¾Ý!ÖÕÖ¹´Ë´Î²Ù×÷!"<<endl;break;
+		default:cout<<"é”™è¯¯æ•°æ®!ç»ˆæ­¢æ­¤æ¬¡æ“ä½œ!"<<endl;break;
 	}
 	cout<<"===================="<<endl;
-	cout<<"1.¼ÌÐøÌí¼Ó 2.·µ»Ø²Ëµ¥"<<endl;
+	cout<<"1.ç»§ç»­æ·»åŠ  2.è¿”å›žèœå•"<<endl;
 	cout<<"===================="<<endl;
 	int x;
 	cin>>x;
@@ -132,7 +132,7 @@ void Item_Add()
 		case 2:SHOW_MENU();break;
 		default:
 		{
-			cout<<"´íÎóÊý¾Ý!Ä¬ÈÏ»Øµ½²Ëµ¥!"<<endl<<endl;
+			cout<<"é”™è¯¯æ•°æ®!é»˜è®¤å›žåˆ°èœå•!"<<endl<<endl;
 			SHOW_MENU();
 			break;
 		}
@@ -144,20 +144,20 @@ void Item_Search()
 	long search_num;
 	string search_title; 
 	cout<<"==================================================="<<endl;
-    cout<<"                       ²éÑ¯ÎïÆ·                     "<<endl;
-    cout<<"     1.°´±êÌâ²éÑ¯    2.°´±àºÅ²éÑ¯    3.°´Àà±ð²éÑ¯     "<<endl;
+    cout<<"                       æŸ¥è¯¢ç‰©å“                     "<<endl;
+    cout<<"     1.æŒ‰æ ‡é¢˜æŸ¥è¯¢    2.æŒ‰ç¼–å·æŸ¥è¯¢    3.æŒ‰ç±»åˆ«æŸ¥è¯¢     "<<endl;
 	cout<<"==================================================="<<endl<<endl;
 	cin>>n;
 	switch(n)
 	{
 		case 1:
 		{
-			cout<<"ÊäÈë±êÌâ:";
+			cout<<"è¾“å…¥æ ‡é¢˜:";
 			cin>>search_title;
 			for(int i=0;i<Book_Count;i++)
 			if(search_title==book[i].Title) 
 			{
-				cout<<"²éÑ¯½á¹ûÈçÏÂ:"<<endl;
+				cout<<"æŸ¥è¯¢ç»“æžœå¦‚ä¸‹:"<<endl;
 				book[i].Book_Display();
 				flag=1;
 				break;
@@ -165,7 +165,7 @@ void Item_Search()
 			if(flag==0) for(int i=0;i<Disk_Count;i++)
 			if(search_title==disk[i].Title)
 			{
-				cout<<"²éÑ¯½á¹ûÈçÏÂ:"<<endl;
+				cout<<"æŸ¥è¯¢ç»“æžœå¦‚ä¸‹:"<<endl;
 				disk[i].Disk_Display();
 				flag=1;
 				break;
@@ -173,7 +173,7 @@ void Item_Search()
 			if(flag==0) for(int i=0;i<Pic_Count;i++)
 			if(search_title==pic[i].Title)
 			{
-				cout<<"²éÑ¯½á¹ûÈçÏÂ:"<<endl;
+				cout<<"æŸ¥è¯¢ç»“æžœå¦‚ä¸‹:"<<endl;
 				pic[i].Pic_Display();
 				flag=1;
 				break;
@@ -181,19 +181,19 @@ void Item_Search()
 			if(flag==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±êÌâ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨æ ‡é¢˜     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
 		}
 		case 2:
 		{
-			cout<<"ÊäÈë±àºÅ:";
+			cout<<"è¾“å…¥ç¼–å·:";
 			cin>>search_num;
 			for(int i=0;i<Book_Count;i++)
 			if(search_num==book[i].Number) 
 			{
-				cout<<"²éÑ¯½á¹ûÈçÏÂ:"<<endl;
+				cout<<"æŸ¥è¯¢ç»“æžœå¦‚ä¸‹:"<<endl;
 				book[i].Book_Display();
 				flag=1;
 				break;
@@ -201,7 +201,7 @@ void Item_Search()
 			if(flag==0) for(int i=0;i<Disk_Count;i++)
 			if(search_num==disk[i].Number)
 			{
-				cout<<"²éÑ¯½á¹ûÈçÏÂ:"<<endl;
+				cout<<"æŸ¥è¯¢ç»“æžœå¦‚ä¸‹:"<<endl;
 				disk[i].Disk_Display();
 				flag=1;
 				break;
@@ -209,7 +209,7 @@ void Item_Search()
 			if(flag==0) for(int i=0;i<Pic_Count;i++)
 			if(search_num==pic[i].Number)
 			{
-				cout<<"²éÑ¯½á¹ûÈçÏÂ:"<<endl;
+				cout<<"æŸ¥è¯¢ç»“æžœå¦‚ä¸‹:"<<endl;
 				pic[i].Pic_Display();
 				flag=1;
 				break;
@@ -217,7 +217,7 @@ void Item_Search()
 			if(flag==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±àºÅ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨ç¼–å·     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
@@ -226,7 +226,7 @@ void Item_Search()
 		{
 			int x;
 			cout<<"========================================"<<endl;
-			cout<<"1.²éÑ¯Í¼Êé    2.²éÑ¯ÊÓÆµ¹âÅÌ    3.²éÑ¯Í¼»­"<<endl;
+			cout<<"1.æŸ¥è¯¢å›¾ä¹¦    2.æŸ¥è¯¢è§†é¢‘å…‰ç›˜    3.æŸ¥è¯¢å›¾ç”»"<<endl;
 			cout<<"========================================"<<endl;
 			cin>>x;
 			switch(x)
@@ -236,13 +236,13 @@ void Item_Search()
 					if(Book_Count==0)
 					{
 						cout<<"===================="<<endl;
-						cout<<"    ¸ÃÀà±ðÃ»ÓÐÎïÆ·   "<<endl;
+						cout<<"    è¯¥ç±»åˆ«æ²¡æœ‰ç‰©å“   "<<endl;
 						cout<<"===================="<<endl<<endl;
 					}
 					else 
 					{
 						cout<<"=================="<<endl;
-						cout<<"ÒÔÏÂÊÇÍ¼ÊéÀà±ðµÄÐÅÏ¢"<<endl; 
+						cout<<"ä»¥ä¸‹æ˜¯å›¾ä¹¦ç±»åˆ«çš„ä¿¡æ¯"<<endl; 
 						for(int i=0;i<Book_Count;i++) book[i].Book_Display();
 						cout<<"=================="<<endl<<endl;
 					}
@@ -253,13 +253,13 @@ void Item_Search()
 					if(Disk_Count==0) 
 					{
 						cout<<"===================="<<endl;
-						cout<<"    ¸ÃÀà±ðÃ»ÓÐÎïÆ·   "<<endl;
+						cout<<"    è¯¥ç±»åˆ«æ²¡æœ‰ç‰©å“   "<<endl;
 						cout<<"===================="<<endl<<endl;
 					}
 					else
 					{
 						cout<<"======================"<<endl;
-						cout<<"ÒÔÏÂÊÇÊÓÆµ¹âÅÌÀà±ðµÄÐÅÏ¢"<<endl;
+						cout<<"ä»¥ä¸‹æ˜¯è§†é¢‘å…‰ç›˜ç±»åˆ«çš„ä¿¡æ¯"<<endl;
 						for(int i=0;i<Disk_Count;i++) disk[i].Disk_Display();
 						cout<<"======================"<<endl<<endl;
 					}
@@ -270,25 +270,25 @@ void Item_Search()
 					if(Pic_Count==0)
 					{
 						cout<<"===================="<<endl;
-						cout<<"    ¸ÃÀà±ðÃ»ÓÐÎïÆ·   "<<endl;
+						cout<<"    è¯¥ç±»åˆ«æ²¡æœ‰ç‰©å“   "<<endl;
 						cout<<"===================="<<endl<<endl;
 					}
 					else
 					{
 						cout<<"=================="<<endl;
-						cout<<"ÒÔÏÂÊÇÍ¼»­Àà±ðµÄÐÅÏ¢"<<endl; 
+						cout<<"ä»¥ä¸‹æ˜¯å›¾ç”»ç±»åˆ«çš„ä¿¡æ¯"<<endl; 
 						for(int i=0;i<Pic_Count;i++) pic[i].Pic_Display();
 						cout<<"=================="<<endl<<endl;
 					}
 					break;
 				}
-				default:cout<<"´íÎóÊý¾Ý!ÖÕÖ¹´Ë´Î²Ù×÷!"<<endl;break;
+				default:cout<<"é”™è¯¯æ•°æ®!ç»ˆæ­¢æ­¤æ¬¡æ“ä½œ!"<<endl;break;
 			} 
 		}
-		default:cout<<"´íÎóÊý¾Ý!ÖÕÖ¹´Ë´Î²Ù×÷!"<<endl;break;
+		default:cout<<"é”™è¯¯æ•°æ®!ç»ˆæ­¢æ­¤æ¬¡æ“ä½œ!"<<endl;break;
 	}
 	cout<<"===================="<<endl;
-	cout<<"1.¼ÌÐø²éÕÒ 2.·µ»Ø²Ëµ¥"<<endl;
+	cout<<"1.ç»§ç»­æŸ¥æ‰¾ 2.è¿”å›žèœå•"<<endl;
 	cout<<"===================="<<endl;
 	cin>>x;
 	switch(x)
@@ -297,7 +297,7 @@ void Item_Search()
 		case 2:SHOW_MENU();break;
 		default:
 		{
-			cout<<"´íÎóÊý¾Ý!Ä¬ÈÏ»Øµ½²Ëµ¥!"<<endl<<endl;
+			cout<<"é”™è¯¯æ•°æ®!é»˜è®¤å›žåˆ°èœå•!"<<endl<<endl;
 			SHOW_MENU();
 			break;
 		}
@@ -307,8 +307,8 @@ void Item_Show()
 {
 	int x,n;
 	cout<<"========================================================="<<endl;
-    cout<<"                        ÏÔÊ¾ÎïÆ·¿â                        "<<endl;
-    cout<<"      1.ÏÔÊ¾Í¼Êé¿â    2.ÏÔÊ¾ÊÓÆµ¹âÅÌ¿â    3.ÏÔÊ¾Í¼»­¿â      "<<endl;
+    cout<<"                        æ˜¾ç¤ºç‰©å“åº“                        "<<endl;
+    cout<<"      1.æ˜¾ç¤ºå›¾ä¹¦åº“    2.æ˜¾ç¤ºè§†é¢‘å…‰ç›˜åº“    3.æ˜¾ç¤ºå›¾ç”»åº“      "<<endl;
 	cout<<"========================================================="<<endl<<endl;
 	cin>>n;
 	switch(n)
@@ -318,14 +318,14 @@ void Item_Show()
 			if(Book_Count==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"    Í¼Êé¿âÖÐÃ»ÎïÆ·   "<<endl;
+				cout<<"    å›¾ä¹¦åº“ä¸­æ²¡ç‰©å“   "<<endl;
 				cout<<"===================="<<endl<<endl;
 				break;
 			}
 			else
 			{
 				cout<<"===================="<<endl;
-				cout<<"Í¼Êé¿âÖÐµÄÎïÆ·ÈçÏÂËùÊ¾"<<endl;
+				cout<<"å›¾ä¹¦åº“ä¸­çš„ç‰©å“å¦‚ä¸‹æ‰€ç¤º"<<endl;
 				for(int i=0;i<Book_Count;i++) book[i].Book_Display();
 				cout<<"===================="<<endl<<endl;
 			}
@@ -336,13 +336,13 @@ void Item_Show()
 			if(Disk_Count==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"  ÊÓÆµ¹âÅÌ¿âÖÐÃ»ÎïÆ·  "<<endl;
+				cout<<"  è§†é¢‘å…‰ç›˜åº“ä¸­æ²¡ç‰©å“  "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
 			else
 			{
 				cout<<"========================"<<endl;
-				cout<<"ÊÓÆµ¹âÅÌ¿âÖÐµÄÎïÆ·ÈçÏÂËùÊ¾"<<endl;
+				cout<<"è§†é¢‘å…‰ç›˜åº“ä¸­çš„ç‰©å“å¦‚ä¸‹æ‰€ç¤º"<<endl;
 				for(int i=0;i<Disk_Count;i++) disk[i].Disk_Display();
 				cout<<"========================"<<endl<<endl;
 			}
@@ -353,22 +353,22 @@ void Item_Show()
 			if(Pic_Count==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"    Í¼»­¿âÖÐÃ»ÎïÆ·   "<<endl;
+				cout<<"    å›¾ç”»åº“ä¸­æ²¡ç‰©å“   "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
 			else
 			{
 				cout<<"===================="<<endl;
-				cout<<"Í¼»­¿âÖÐµÄÎïÆ·ÈçÏÂËùÊ¾"<<endl;
+				cout<<"å›¾ç”»åº“ä¸­çš„ç‰©å“å¦‚ä¸‹æ‰€ç¤º"<<endl;
 				for(int i=0;i<Pic_Count;i++) pic[i].Pic_Display();
 				cout<<"===================="<<endl;
 			}
             break;
 		}
-		default:cout<<"´íÎóÊý¾Ý!ÖÕÖ¹´Ë´Î²Ù×÷!"<<endl;break;
+		default:cout<<"é”™è¯¯æ•°æ®!ç»ˆæ­¢æ­¤æ¬¡æ“ä½œ!"<<endl;break;
 	}
 	cout<<"===================="<<endl;
-	cout<<"1.¼ÌÐøÏÔÊ¾ 2.·µ»Ø²Ëµ¥"<<endl;
+	cout<<"1.ç»§ç»­æ˜¾ç¤º 2.è¿”å›žèœå•"<<endl;
 	cout<<"===================="<<endl;
 	cin>>x;
 	switch(x)
@@ -377,7 +377,7 @@ void Item_Show()
 		case 2:SHOW_MENU();break;
 		default:
 		{
-			cout<<"´íÎóÊý¾Ý!Ä¬ÈÏ»Øµ½²Ëµ¥!"<<endl<<endl;
+			cout<<"é”™è¯¯æ•°æ®!é»˜è®¤å›žåˆ°èœå•!"<<endl<<endl;
 			SHOW_MENU();
 			break;
 		}
@@ -387,8 +387,8 @@ void Item_Edit()
 {
 	int x,n,flag=0;
 	cout<<"==================================================="<<endl;
-    cout<<"                       ±à¼­ÎïÆ·                     "<<endl;
-    cout<<"      1.±à¼­Í¼Êé    2.±à¼­ÊÓÆµ¹âÅÌ    3.±à¼­Í¼»­      "<<endl;
+    cout<<"                       ç¼–è¾‘ç‰©å“                     "<<endl;
+    cout<<"      1.ç¼–è¾‘å›¾ä¹¦    2.ç¼–è¾‘è§†é¢‘å…‰ç›˜    3.ç¼–è¾‘å›¾ç”»      "<<endl;
 	cout<<"==================================================="<<endl<<endl;
     cin>>n;
     switch(n)
@@ -398,19 +398,19 @@ void Item_Edit()
             if(Book_Count==0) 
 			{
 				cout<<"===================="<<endl;
-				cout<<"    Í¼Êé¿âÖÐÃ»ÎïÆ·   "<<endl;
+				cout<<"    å›¾ä¹¦åº“ä¸­æ²¡ç‰©å“   "<<endl;
 				cout<<"===================="<<endl<<endl;
 				break;
 			}
             long edit_num;
-            cout<<"±à¼­Í¼Êé,ÊäÈëÍ¼ÊéµÄ±àºÅ:";
+            cout<<"ç¼–è¾‘å›¾ä¹¦,è¾“å…¥å›¾ä¹¦çš„ç¼–å·:";
             cin>>edit_num;
             for(int i=0;i<Book_Count;i++)
             if(edit_num==book[i].Number)
             {
 				flag=1;
                 cout<<"===================="<<endl;
-                cout<<"  ÕÒµ½Í¼Êé,½øÐÐÐÞ¸Ä  "<<endl;
+                cout<<"  æ‰¾åˆ°å›¾ä¹¦,è¿›è¡Œä¿®æ”¹  "<<endl;
 				cout<<"===================="<<endl<<endl;
                 book[i].Book_Add();
                 break;
@@ -418,7 +418,7 @@ void Item_Edit()
             if(flag==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±àºÅ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨ç¼–å·     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
@@ -428,19 +428,19 @@ void Item_Edit()
             if(Disk_Count==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"  ÊÓÆµ¹âÅÌ¿âÖÐÃ»ÎïÆ·  "<<endl;
+				cout<<"  è§†é¢‘å…‰ç›˜åº“ä¸­æ²¡ç‰©å“  "<<endl;
 				cout<<"===================="<<endl<<endl;
 				break;
 			}
             long edit_num;
-            cout<<"±à¼­ÊÓÆµ¹âÅÌ,ÊäÈëÊÓÆµ¹âÅÌµÄ±àºÅ:";
+            cout<<"ç¼–è¾‘è§†é¢‘å…‰ç›˜,è¾“å…¥è§†é¢‘å…‰ç›˜çš„ç¼–å·:";
             cin>>edit_num;
             for(int i=0;i<Disk_Count;i++)
             if(edit_num==disk[i].Number)
             {
 				flag=1;
                 cout<<"===================="<<endl;
-                cout<<"ÕÒµ½ÊÓÆµ¹âÅÌ,½øÐÐÐÞ¸Ä"<<endl;
+                cout<<"æ‰¾åˆ°è§†é¢‘å…‰ç›˜,è¿›è¡Œä¿®æ”¹"<<endl;
 				cout<<"===================="<<endl<<endl;
                 disk[i].Disk_Add();
                 break;
@@ -448,7 +448,7 @@ void Item_Edit()
             if(flag==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±àºÅ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨ç¼–å·     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
@@ -458,19 +458,19 @@ void Item_Edit()
             if(Pic_Count==0) 
 			{
 				cout<<"===================="<<endl;
-				cout<<"    Í¼»­¿âÖÐÃ»ÎïÆ·   "<<endl;
+				cout<<"    å›¾ç”»åº“ä¸­æ²¡ç‰©å“   "<<endl;
 				cout<<"===================="<<endl<<endl;
 				break;
 			}
             long edit_num;
-            cout<<"±à¼­Í¼»­,ÊäÈëÍ¼»­µÄ±àºÅ:";
+            cout<<"ç¼–è¾‘å›¾ç”»,è¾“å…¥å›¾ç”»çš„ç¼–å·:";
             cin>>edit_num;
             for(int i=0;i<Pic_Count;i++)
             if(edit_num==pic[i].Number)
             {
 				flag=1;
                 cout<<"===================="<<endl;
-                cout<<"  ÕÒµ½Í¼»­,½øÐÐÐÞ¸Ä  "<<endl;
+                cout<<"  æ‰¾åˆ°å›¾ç”»,è¿›è¡Œä¿®æ”¹  "<<endl;
 				cout<<"===================="<<endl<<endl;
                 pic[i].Pic_Add();
                 break;
@@ -478,15 +478,15 @@ void Item_Edit()
             if(flag==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±àºÅ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨ç¼–å·     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
         }
-		default:cout<<"´íÎóÊý¾Ý!ÖÕÖ¹´Ë´Î²Ù×÷!"<<endl;break;
+		default:cout<<"é”™è¯¯æ•°æ®!ç»ˆæ­¢æ­¤æ¬¡æ“ä½œ!"<<endl;break;
     }
 	cout<<"===================="<<endl;
-	cout<<"1.¼ÌÐø±à¼­ 2.·µ»Ø²Ëµ¥"<<endl;
+	cout<<"1.ç»§ç»­ç¼–è¾‘ 2.è¿”å›žèœå•"<<endl;
 	cout<<"===================="<<endl;
 	cin>>x;
 	switch(x)
@@ -495,7 +495,7 @@ void Item_Edit()
 		case 2:SHOW_MENU();break;
 		default:
 		{
-			cout<<"´íÎóÊý¾Ý!Ä¬ÈÏ»Øµ½²Ëµ¥!"<<endl<<endl;
+			cout<<"é”™è¯¯æ•°æ®!é»˜è®¤å›žåˆ°èœå•!"<<endl<<endl;
 			SHOW_MENU();
 			break;
 		}
@@ -505,8 +505,8 @@ void Item_Delete()
 {
     int x,n,flag=0;
 	cout<<"==================================================="<<endl;
-    cout<<"                       É¾³ýÎïÆ·                     "<<endl;
-    cout<<"      1.É¾³ýÍ¼Êé    2.É¾³ýÊÓÆµ¹âÅÌ    3.É¾³ýÍ¼»­      "<<endl;
+    cout<<"                       åˆ é™¤ç‰©å“                     "<<endl;
+    cout<<"      1.åˆ é™¤å›¾ä¹¦    2.åˆ é™¤è§†é¢‘å…‰ç›˜    3.åˆ é™¤å›¾ç”»      "<<endl;
 	cout<<"==================================================="<<endl<<endl;
     cin>>n;
     switch(n)
@@ -516,20 +516,20 @@ void Item_Delete()
             if(Book_Count==0) 
 			{
 				cout<<"===================="<<endl;
-				cout<<"    Í¼Êé¿âÖÐÃ»ÎïÆ·   "<<endl;
+				cout<<"    å›¾ä¹¦åº“ä¸­æ²¡ç‰©å“   "<<endl;
 				cout<<"===================="<<endl<<endl;
 				break;
 			}
             long delete_num;
-            cout<<"ÊäÈëÒªÉ¾³ýµÄÍ¼ÊéµÄ±àºÅ:";
+            cout<<"è¾“å…¥è¦åˆ é™¤çš„å›¾ä¹¦çš„ç¼–å·:";
             cin>>delete_num;
             for(int i=0;i<Book_Count;i++)
             if(delete_num==book[i].Number)
             {
 				flag=1;
 				cout<<"===================="<<endl;
-                cout<<"ÕÒµ½Í¼Êé,ÊÇ·ñ½øÐÐÉ¾³ý?"<<endl;
-				cout<<"  ÊÇ(Y)/·ñ(ËæÒâ×Ö·û) "<<endl;
+                cout<<"æ‰¾åˆ°å›¾ä¹¦,æ˜¯å¦è¿›è¡Œåˆ é™¤?"<<endl;
+				cout<<"  æ˜¯(Y)/å¦(éšæ„å­—ç¬¦) "<<endl;
 				cout<<"===================="<<endl<<endl;
 				char ans;
 				cin>>ans;
@@ -547,14 +547,14 @@ void Item_Delete()
                 	}
                		Book_Count--;
 					cout<<"===================="<<endl;
-					cout<<"      É¾³ý³É¹¦       "<<endl;
+					cout<<"      åˆ é™¤æˆåŠŸ       "<<endl;
 					cout<<"===================="<<endl<<endl;
                 	break;
 				}
 				else
 				{
 					cout<<"===================="<<endl;
-					cout<<"      È¡ÏûÉ¾³ý       "<<endl;
+					cout<<"      å–æ¶ˆåˆ é™¤       "<<endl;
 					cout<<"===================="<<endl<<endl;
 					break;
 				}
@@ -562,7 +562,7 @@ void Item_Delete()
             if(flag==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±àºÅ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨ç¼–å·     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
@@ -572,20 +572,20 @@ void Item_Delete()
             if(Disk_Count==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"  ÊÓÆµ¹âÅÌ¿âÖÐÃ»ÎïÆ·  "<<endl;
+				cout<<"  è§†é¢‘å…‰ç›˜åº“ä¸­æ²¡ç‰©å“  "<<endl;
 				cout<<"===================="<<endl<<endl;
 				break;
 			}
             long delete_num;
-            cout<<"ÊäÈëÒªÉ¾³ýµÄÊÓÆµ¹âÅÌµÄ±àºÅ:";
+            cout<<"è¾“å…¥è¦åˆ é™¤çš„è§†é¢‘å…‰ç›˜çš„ç¼–å·:";
             cin>>delete_num;
             for(int i=0;i<Disk_Count;i++)
             if(delete_num==disk[i].Number)
             {
 				flag=1;
 				cout<<"========================"<<endl;
-                cout<<"ÕÒµ½ÊÓÆµ¹âÅÌ,ÊÇ·ñ½øÐÐÉ¾³ý?"<<endl;
-				cout<<"    ÊÇ(Y)/·ñ(ËæÒâ×Ö·û)   "<<endl;
+                cout<<"æ‰¾åˆ°è§†é¢‘å…‰ç›˜,æ˜¯å¦è¿›è¡Œåˆ é™¤?"<<endl;
+				cout<<"    æ˜¯(Y)/å¦(éšæ„å­—ç¬¦)   "<<endl;
 				cout<<"========================"<<endl<<endl;
 				char ans;
 				cin>>ans;
@@ -603,14 +603,14 @@ void Item_Delete()
                 	}
                 	Disk_Count--;
 					cout<<"===================="<<endl;
-					cout<<"      É¾³ý³É¹¦       "<<endl;
+					cout<<"      åˆ é™¤æˆåŠŸ       "<<endl;
 					cout<<"===================="<<endl<<endl;
                 	break;
 				}
 				else
 				{
 					cout<<"===================="<<endl;
-					cout<<"      È¡ÏûÉ¾³ý       "<<endl;
+					cout<<"      å–æ¶ˆåˆ é™¤       "<<endl;
 					cout<<"===================="<<endl<<endl;
 					break;
 				}
@@ -618,7 +618,7 @@ void Item_Delete()
             if(flag==0) 
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±àºÅ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨ç¼–å·     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
@@ -628,20 +628,20 @@ void Item_Delete()
             if(Pic_Count==0) 
 			{
 				cout<<"===================="<<endl;
-				cout<<"    Í¼»­¿âÖÐÃ»ÎïÆ·   "<<endl;
+				cout<<"    å›¾ç”»åº“ä¸­æ²¡ç‰©å“   "<<endl;
 				cout<<"===================="<<endl<<endl;
 				break;
 			}
             long delete_num;
-            cout<<"ÊäÈëÒªÉ¾³ýµÄÍ¼»­µÄ±àºÅ:";
+            cout<<"è¾“å…¥è¦åˆ é™¤çš„å›¾ç”»çš„ç¼–å·:";
             cin>>delete_num;
             for(int i=0;i<Pic_Count;i++)
             if(delete_num==pic[i].Number)
             {
 				flag=1;
                 cout<<"===================="<<endl;
-                cout<<"ÕÒµ½Í¼Êé,ÊÇ·ñ½øÐÐÉ¾³ý?"<<endl;
-				cout<<"  ÊÇ(Y)/·ñ(ËæÒâ×Ö·û) "<<endl;
+                cout<<"æ‰¾åˆ°å›¾ä¹¦,æ˜¯å¦è¿›è¡Œåˆ é™¤?"<<endl;
+				cout<<"  æ˜¯(Y)/å¦(éšæ„å­—ç¬¦) "<<endl;
 				cout<<"===================="<<endl<<endl;
 				char ans;
 				cin>>ans;
@@ -659,14 +659,14 @@ void Item_Delete()
                 	}
                 	Pic_Count--;
 					cout<<"===================="<<endl;
-					cout<<"      É¾³ý³É¹¦       "<<endl;
+					cout<<"      åˆ é™¤æˆåŠŸ       "<<endl;
 					cout<<"===================="<<endl<<endl;
                 	break;
 				}
 				else
 				{
 					cout<<"===================="<<endl;
-					cout<<"      È¡ÏûÉ¾³ý       "<<endl;
+					cout<<"      å–æ¶ˆåˆ é™¤       "<<endl;
 					cout<<"===================="<<endl<<endl;
 					break;
 				}
@@ -674,15 +674,15 @@ void Item_Delete()
             if(flag==0)
 			{
 				cout<<"===================="<<endl;
-				cout<<"      ²»´æÔÚ±àºÅ     "<<endl;
+				cout<<"      ä¸å­˜åœ¨ç¼–å·     "<<endl;
 				cout<<"===================="<<endl<<endl;
 			}
             break;
         }
-		default:cout<<"´íÎóÊý¾Ý!ÖÕÖ¹´Ë´Î²Ù×÷!"<<endl;break;
+		default:cout<<"é”™è¯¯æ•°æ®!ç»ˆæ­¢æ­¤æ¬¡æ“ä½œ!"<<endl;break;
     }
 	cout<<"===================="<<endl;
-	cout<<"1.¼ÌÐøÉ¾³ý 2.·µ»Ø²Ëµ¥"<<endl;
+	cout<<"1.ç»§ç»­åˆ é™¤ 2.è¿”å›žèœå•"<<endl;
 	cout<<"===================="<<endl;
 	cin>>x;
 	switch(x)
@@ -691,7 +691,7 @@ void Item_Delete()
 		case 2:SHOW_MENU();break;
 		default:
 		{
-			cout<<"´íÎóÊý¾Ý!Ä¬ÈÏ»Øµ½²Ëµ¥!"<<endl<<endl;
+			cout<<"é”™è¯¯æ•°æ®!é»˜è®¤å›žåˆ°èœå•!"<<endl<<endl;
 			SHOW_MENU();
 			break;
 		}
@@ -700,8 +700,8 @@ void Item_Delete()
 void Item_Sum()
 {
 	cout<<"============================================================="<<endl;
-    cout<<"ÎïÆ·¿âÖÐ×ÜÎïÆ·ÊýÎª:"<<(Book_Count+Disk_Count+Pic_Count)<<endl;
-    cout<<"Í¼ÊéÊýÁ¿Îª:"<<Book_Count<<"    ÊÓÆµ¹âÅÌÊýÁ¿Îª:"<<Disk_Count<<"    Í¼»­ÊýÁ¿Îª:"<<Pic_Count<<endl;
+    cout<<"ç‰©å“åº“ä¸­æ€»ç‰©å“æ•°ä¸º:"<<(Book_Count+Disk_Count+Pic_Count)<<endl;
+    cout<<"å›¾ä¹¦æ•°é‡ä¸º:"<<Book_Count<<"    è§†é¢‘å…‰ç›˜æ•°é‡ä¸º:"<<Disk_Count<<"    å›¾ç”»æ•°é‡ä¸º:"<<Pic_Count<<endl;
 	cout<<"============================================================="<<endl<<endl;
 }
 void Item_Save()
@@ -710,9 +710,9 @@ void Item_Save()
 	book_save.open("Book.txt");
 	disk_save.open("Disk.txt");
 	pic_save.open("Pic.txt");
-	book_save<<"Í¼Êé¿â:"<<endl;
-	disk_save<<"ÊÓÆµ¹âÅÌ¿â:"<<endl;
-	pic_save<<"Í¼»­¿â:"<<endl;
+	book_save<<"å›¾ä¹¦åº“:"<<endl;
+	disk_save<<"è§†é¢‘å…‰ç›˜åº“:"<<endl;
+	pic_save<<"å›¾ç”»åº“:"<<endl;
 	for(int i=0;i<Book_Count-1;i++)
 	book_save<<book[i].Number<<"\t"<<book[i].Title<<"\t"<<book[i].Artist<<"\t"<<book[i].Level<<"\t"<<book[i].Publish<<"\t"<<book[i].ISBN<<"\t"<<book[i].Page_Num<<endl;
 	book_save<<book[Book_Count-1].Number<<"\t"<<book[Book_Count-1].Title<<"\t"<<book[Book_Count-1].Artist<<"\t"<<book[Book_Count-1].Level<<"\t"<<book[Book_Count-1].Publish<<"\t"<<book[Book_Count-1].ISBN<<"\t"<<book[Book_Count-1].Page_Num;
@@ -726,7 +726,7 @@ void Item_Save()
 	disk_save.close();
 	pic_save.close();
 	cout<<"==================="<<endl;
-	cout<<"      ±£´æÍê±Ï      "<<endl;
+	cout<<"      ä¿å­˜å®Œæ¯•      "<<endl;
 	cout<<"==================="<<endl<<endl;
 }
 void Item_Read()
@@ -756,14 +756,14 @@ void Item_Read()
 	disk_read.close();
 	pic_read.close();
 	cout<<"==================="<<endl;
-	cout<<"      ¶ÁÈ¡Íê±Ï      "<<endl;
+	cout<<"      è¯»å–å®Œæ¯•      "<<endl;
 	cout<<"==================="<<endl<<endl;
 }
 int main()
 {
 	cout<<"##################################"<<endl;
-    cout<<"       »¶Ó­À´µ½Ã½Ìå¿â¹ÜÀíÏµÍ³      "<<endl;
-	cout<<"     ÊäÈë¹¦ÄÜÇ°¶ÔÓ¦ÐòºÅ½øÐÐ²Ù×÷    "<<endl;
+    cout<<"       æ¬¢è¿Žæ¥åˆ°åª’ä½“åº“ç®¡ç†ç³»ç»Ÿ      "<<endl;
+	cout<<"     è¾“å…¥åŠŸèƒ½å‰å¯¹åº”åºå·è¿›è¡Œæ“ä½œ    "<<endl;
 	cout<<"##################################"<<endl<<endl;
 	SHOW_MENU();
     while(1)
@@ -778,10 +778,10 @@ int main()
             case 4:Item_Edit();break;
             case 5:Item_Delete();break;
             case 6:Item_Sum();break;
-			case 7:Item_Save();break;
-			case 8:Item_Read();break;
-			case 9:Item_Save();return 0;
-			default:cout<<"´íÎóÊý¾Ý!ÖÕÖ¹´Ë´Î²Ù×÷!"<<endl;break;
+	    case 7:Item_Save();break;
+	    case 8:Item_Read();break;
+	    case 9:Item_Save();return 0;
+	    default:cout<<"é”™è¯¯æ•°æ®!ç»ˆæ­¢æ­¤æ¬¡æ“ä½œ!"<<endl;break;
         }
     }
 }
